@@ -11,7 +11,7 @@ import { Home } from './pages/Home';
 import { AllProducts } from './pages/AllProducts';
 import { CategoryProducts } from './pages/CategoryProducts';
 import { ProductDetail } from './pages/ProductDetail';
-import { getProducts } from './api/products';
+//import { getProducts } from './api/products';
 
 const router = createBrowserRouter(
   createRoutesFromElements(

@@ -20,7 +20,7 @@ export const getCategories = () =>
 
 export const getCategory = (categoryId) =>
     new Promise((res, rej) => {
-        const response = categories.find((category) => category.id == categoryId);
+        const response = categories.find((category) => category.id === +categoryId);
         setTimeout(() => {
             res(response);
         }, 500);
