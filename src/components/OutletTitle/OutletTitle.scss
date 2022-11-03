@@ -1,0 +1,12 @@
+
+@use "../../styles/floweryWebGuide.scss" as floweryStyleGuide;
+
+.outletTitle {
+    color: floweryStyleGuide.$c-floweryThird;
+    background-color: floweryStyleGuide.$c-flowery5;
+    text-align: center;
+    width: fit-content;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }

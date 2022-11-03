@@ -1,0 +1,49 @@
+@use "../../styles/floweryWebGuide.scss" as floweryStyleGuide;
+
+.counterContainer {
+    width: 100%;
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
+    &__top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 20px 0px 20px;
+        &__counter {
+            font-size: floweryStyleGuide.$ts-floweryXL;
+            font-weight: bold;
+        }
+    }
+    &__botton {
+        height: fit-content;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    color: floweryStyleGuide.$c-floweryThird;
+    & > svg {
+        position: relative;
+        background-color: floweryStyleGuide.$c-flowerySecond;
+        border-radius: 50%;
+    }
+}
+
+.button {
+    display: inline-block;
+    color: floweryStyleGuide.$c-floweryThird;
+    background: floweryStyleGuide.$c-flowerySecond;
+    border-radius: 10px;
+    text-transform: uppercase;
+    padding: 15px;
+    text-decoration: none;
+    font-size: floweryStyleGuide.$ts-floweryM;
+}

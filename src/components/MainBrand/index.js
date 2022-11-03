@@ -1,0 +1,1 @@
+export { MainBrand } from './MainBrand';

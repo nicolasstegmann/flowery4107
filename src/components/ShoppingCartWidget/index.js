@@ -1,0 +1,1 @@
+export { ShoppingCartWidget } from './ShoppingCartWidget';

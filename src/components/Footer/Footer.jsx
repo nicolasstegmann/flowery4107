@@ -1,8 +1,8 @@
-const Footer = () => {
+export const Footer = () => {
     return (
         <footer className="footer">
         <div>
-            <img className="footer__img" src={require('../img/floweryCircle.png')} alt="4107 Flowery" />        
+            <img className="footer__img" src={require('../../img/floweryCircle.png')} alt="4107 Flowery" />        
         </div>
         <div className="footer__ctn">
             <div className="footer__ctn__item">
@@ -12,5 +12,3 @@ const Footer = () => {
       </footer>
     )
 }
-
-export default Footer

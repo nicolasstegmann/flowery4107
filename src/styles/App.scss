@@ -42,6 +42,16 @@ a {
   color: floweryStyleGuide.$c-floweryMain;
 }
 
+.generalPageLayout {
+  position: relative;
+  min-height: 100vh;  
+}
+
+.generalOutletLayout {
+  margin: 30px;
+  padding-bottom: 10rem;
+}
+
 .header {
   color: floweryStyleGuide.$c-floweryMain;
   display: flex;
@@ -66,6 +76,23 @@ a {
   color: floweryStyleGuide.$c-floweryMain;
   font-weight: bold;
 }
+
+.header__nav .header__nav-item_underline{
+  color: floweryStyleGuide.$c-floweryMain;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;  
+}
+
+.header__nav .header__nav-item_underline:after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: floweryStyleGuide.$c-floweryMain;
+}
 .header__buttons button{
   background-color: floweryStyleGuide.$c-floweryThird;
   border: 2px solid floweryStyleGuide.$c-flowerySecond;
@@ -79,14 +106,15 @@ a {
 }
 
 .footer {
+  height: 7rem;
   position: absolute;
+  bottom: 0;  
   width: calc(100% - 20px);
   background-color: floweryStyleGuide.$c-floweryMain;
   padding: 10px;
   border-radius: 10px;
   margin: 10px;
   margin-top: auto;
-  bottom: 0;
   display: grid; 
   grid-template-columns: 50px 1.5fr; 
   grid-template-rows: 1fr; 
@@ -114,7 +142,6 @@ a {
 .hover-underline-animation {
   display: inline-block;
   position: relative;
-  color: floweryStyleGuide.$c-floweryMain;
 }
 
 .hover-underline-animation:after {
@@ -161,8 +188,17 @@ a {
   &__Button:hover {
     background: floweryStyleGuide.$c-floweryMain;
     padding: 15px 20px;
-    &>a {
-      color: floweryStyleGuide.$c-flowery2;
-    }
+    color: floweryStyleGuide.$c-flowery2;
   }
+}
+
+.buttonPointer {
+  cursor: pointer;
+  * {
+    cursor: pointer;
+  }
+  transition: .3s;
+  &:hover {
+    scale: 110%;
+}  
 }

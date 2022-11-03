@@ -1,7 +1,7 @@
 import { IconContext } from "react-icons";
 import { FiShoppingCart } from "react-icons/fi";
 
-const ShoppingCartWidget = ({shoppingCartQty}) => {
+export const ShoppingCartWidget = ({shoppingCartQty}) => {
 
   let iconStyle = { backgroundColor: "white", color: "blue"};
 
@@ -11,5 +11,3 @@ const ShoppingCartWidget = ({shoppingCartQty}) => {
         </IconContext.Provider>
       )
 }
-
-export default ShoppingCartWidget

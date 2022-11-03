@@ -1,0 +1,74 @@
+@use "../../styles/floweryWebGuide.scss" as floweryStyleGuide;
+
+.productCard {
+    cursor: pointer;
+    * {
+      cursor: pointer;
+    }
+    justify-self: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 250px;
+    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.52);
+    border-radius: 20px;
+    background-color: floweryStyleGuide.$c-floweryThird;
+    &__img {
+        height: 150px;
+        margin-top: 5px;
+        margin-bottom: 20px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+    &__content {
+      padding: 5px;
+      display: grid;
+      grid-auto-flow: row;
+      grid-gap: 6px;
+    }
+  
+    &__name {
+      font-size: floweryStyleGuide.$ts-floweryM;
+      font-weight: bold;
+    }
+
+    &__category {
+        font-size: floweryStyleGuide.$ts-floweryXXS;
+        color: floweryStyleGuide.$c-flowery4;
+      }
+
+    &__price {
+      font-size: floweryStyleGuide.$ts-floweryS;
+      background: floweryStyleGuide.$c-flowery4;
+      color: floweryStyleGuide.$c-floweryThird;
+      border-radius: 5px;
+      width: fit-content;
+      padding: 5px;
+    }
+    &__stock {
+      font-size: floweryStyleGuide.$ts-floweryXXS;
+      color: red;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    &__tags {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        margin-bottom: 5px;
+      }
+
+    &:hover {
+        scale: 105%;
+    }
+  }

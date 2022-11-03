@@ -1,0 +1,62 @@
+@use "../../styles/floweryWebGuide.scss" as floweryStyleGuide;
+
+.productDetailCard {
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.52);
+    border-radius: 20px;
+    background-color: floweryStyleGuide.$c-floweryThird;
+    padding: 10px;
+    &__img {
+        height: 500px;
+        margin: 5px;
+        img {
+            width: 100%;
+            height: auto;
+            border: 1px solid transparent;
+            border-radius: 50%;
+        }
+    }
+    &__content {
+        height: 100%;
+        width: auto;
+        padding: 10px;
+        padding: 5px;
+        display: grid;
+        grid-auto-flow: row;
+        grid-gap: 20px;
+
+    }
+      &__name {
+        font-size: floweryStyleGuide.$ts-floweryXL;
+        font-weight: bold;
+      }
+  
+      &__category {
+          font-size: floweryStyleGuide.$ts-floweryS;
+          color: floweryStyleGuide.$c-flowery4;
+        }
+  
+      &__price {
+        font-size: floweryStyleGuide.$ts-floweryL;
+        background: floweryStyleGuide.$c-flowery4;
+        color: floweryStyleGuide.$c-floweryThird;
+        border-radius: 5px;
+        width: fit-content;
+        padding: 5px;
+      }
+      &__stock {
+        font-size: floweryStyleGuide.$ts-floweryXXS;
+        font-weight: bold;
+        text-transform: uppercase;
+        &__warning {
+          color: red;
+        }
+      }
+  
+}
