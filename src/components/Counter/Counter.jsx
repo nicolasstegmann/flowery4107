@@ -37,6 +37,7 @@ export const Counter = ({ stock, buttonText, onButtonClick }) => {
             <Button
                 onClick={() => onButtonClick(counter)}
                 className="button"
+                disabled={!counter}
               >
               {buttonText}
               </Button>
