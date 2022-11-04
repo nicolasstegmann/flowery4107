@@ -1,8 +1,14 @@
 import { Counter } from "../Counter";
 import "./ProductDetailCard.scss"
+import { useCartContext } from "../../context/CartContext";
 
 export const ProductDetailCard = ({ id, name, category, stock, price, img }) => {
-    const addToShoppingCart = (counter) => console.log(`¡Se agregó al carrito! Cantidad ${counter}`)
+
+    const { addProduct } = useCartContext()
+
+    const addToShoppingCart = (counter) => {
+        addProduct({id, name, stock, price}, counter)
+    }
 
     return (
         <div className="productDetailCard">

@@ -4,6 +4,7 @@ import { Tag } from "../Tag";
 
 export const ProductCard = ({id, name, category, tags, price, img, stock}) => {
   const navigate = useNavigate();
+
   return (
     <div className="productCard" onClick={() => navigate(`/product/${id}`)}>
       <div className="productCard__img">

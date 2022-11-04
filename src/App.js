@@ -11,6 +11,10 @@ import { Home } from './pages/Home';
 import { AllProducts } from './pages/AllProducts';
 import { CategoryProducts } from './pages/CategoryProducts';
 import { ProductDetail } from './pages/ProductDetail';
+
+import { CartContext, CartProvider } from './context/CartContext'
+
+import { useContext } from 'react';
 //import { getProducts } from './api/products';
 
 const router = createBrowserRouter(
@@ -55,9 +59,13 @@ const router = createBrowserRouter(
 );
 
 function App() {
+  const shoppingCart = useContext(CartContext)
+  console.log(shoppingCart)
   return (
     <div className="App">
-      <RouterProvider router={router} />
+      <CartProvider>
+        <RouterProvider router={router} />
+      </CartProvider>        
     </div>
   );
 }
