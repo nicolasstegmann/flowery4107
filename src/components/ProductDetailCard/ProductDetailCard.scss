@@ -48,7 +48,8 @@
         color: floweryStyleGuide.$c-floweryThird;
         border-radius: 5px;
         width: fit-content;
-        padding: 5px;
+        padding: 5px 20px 5px 20px;
+        letter-spacing: 2px;
       }
       &__stock {
         font-size: floweryStyleGuide.$ts-floweryXXS;
