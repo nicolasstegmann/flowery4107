@@ -31,7 +31,6 @@ export const AllProducts = ({title}) => {
       <>
         <OutletTitle title = {title}/>
         <ProductCardContainer
-          key = "0"
           products = {products}
           loading = {loading} 
         />

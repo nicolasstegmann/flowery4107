@@ -60,7 +60,6 @@ const router = createBrowserRouter(
 
 function App() {
   const shoppingCart = useContext(CartContext)
-  console.log(shoppingCart)
   return (
     <div className="App">
       <CartProvider>

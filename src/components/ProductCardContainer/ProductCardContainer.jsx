@@ -8,7 +8,6 @@ export const ProductCardContainer = ({ products, loading }) => {
         {loading ? <CardLoader qty={5} /> : null}
         {products.map((product) => {
           return (
-            <>
               <ProductCard
                 key = {product.id}
                 id = {product.id}
@@ -19,7 +18,6 @@ export const ProductCardContainer = ({ products, loading }) => {
                 img = {product.img}
                 stock = {product.stock}
               />
-            </>
           );
         })}
       </div>

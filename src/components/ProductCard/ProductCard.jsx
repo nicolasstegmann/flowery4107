@@ -19,11 +19,9 @@ export const ProductCard = ({id, name, category, tags, price, img, stock}) => {
       <div className="productCard__tags">
         {tags.sort().map((tag, index) => {
           return (
-            <>
             <Tag
             key = {index}
             text = {tag}/>
-            </>
           );
         })}
         

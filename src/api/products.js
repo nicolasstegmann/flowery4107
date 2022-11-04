@@ -7,7 +7,7 @@ import honesty from "../img/products/honesty.jpg"
 const products = [
     {
         id: 1,
-        name: "Apiration",
+        name: "Aspiration",
         tags: [
             "Lilium",
             "Floración 90"
