@@ -1,3 +1,6 @@
-export const Loader = ({text}) => {
-   return <span>Cargando {text? text : 'información'}...</span>
+export const Loader = ({loading, text}) => {
+   const parameters = loading ? {
+      style: {fontWeight : 'bold'}
+   } : {};
+   return loading && <span {...parameters}>Cargando {text? text : 'información'}...</span>
 }

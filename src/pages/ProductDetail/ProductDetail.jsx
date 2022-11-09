@@ -22,8 +22,8 @@ export const ProductDetail = ({ title }) => {
 
   return (
     <div className="productDetail">
-      {product? <OutletTitle title={`${title} ${product?.name}`} /> : null}
-      {loading ? <div className="productDetailLoaderContainer"> <CardLoader qty={1} /></div> : null }
+      {product && <OutletTitle title={`${title} ${product?.name}`} />}
+      <div className="productDetailLoaderContainer"> <CardLoader loading = {loading} qty={1} /></div>
       <div className="productDetailContainer">
         {product ?
           <ProductDetailCard

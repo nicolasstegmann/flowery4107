@@ -22,7 +22,7 @@ export const NavBar = () => {
 
     return (
         <div className="header__nav">
-            {loading ? <Loader text='categorías' /> : null}
+            <Loader loading = {loading} text='categorías' />
             {
                     categories.map((category) => (
                         <NavBarItem

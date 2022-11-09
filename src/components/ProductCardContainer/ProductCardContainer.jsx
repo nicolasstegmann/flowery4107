@@ -5,7 +5,7 @@ import "./ProductCardContainer.scss"
 export const ProductCardContainer = ({ products, loading }) => {
   return (
       <div className="productCardContainer">
-        {loading ? <CardLoader qty={5} /> : null}
+        <CardLoader loading = {loading} qty={5} />
         {products.map((product) => {
           return (
               <ProductCard
