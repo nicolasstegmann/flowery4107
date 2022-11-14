@@ -1,11 +1,14 @@
 import { useCartContext } from "../../context/CartContext";
 import { IconSelector } from "../IconSelector";
+import { Link } from "react-router-dom";
 
 export const ShoppingCartWidget = ({shoppingCartQty}) => {
 
-    const {getCartQty, emptyCart} = useCartContext()
+    const {getCartQty} = useCartContext()
 
     return (
-        <div className = "header__buttons" onClick={() => emptyCart()}> <button>  <IconSelector icon = "cart"/> {getCartQty()}</button> </div>
+        <Link to="/shoppingcart">
+          <div className = "header__buttons" > <button>  <IconSelector icon = "cart"/> {getCartQty()}</button> </div>
+        </Link>
       )
 }

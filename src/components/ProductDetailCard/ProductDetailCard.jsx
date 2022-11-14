@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export const ProductDetailCard = ({ id, name, category, stock, price, img }) => {
 
-    const { addProduct, getCartError } = useCartContext()
+    const { addProduct } = useCartContext()
 
     const addToShoppingCart = (counter) => {
         const msg = addProduct({id, name, stock, price}, counter)

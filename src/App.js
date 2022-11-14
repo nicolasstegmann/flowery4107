@@ -11,11 +11,11 @@ import { Home } from './pages/Home';
 import { AllProducts } from './pages/AllProducts';
 import { CategoryProducts } from './pages/CategoryProducts';
 import { ProductDetail } from './pages/ProductDetail';
+import { ShoppingCart } from './pages/ShoppingCart';
 
 import { CartContext, CartProvider } from './context/CartContext'
 
 import { useContext } from 'react';
-//import { getProducts } from './api/products';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -37,7 +37,6 @@ const router = createBrowserRouter(
         id="categoryProducts"
         path="/category/:categoryId"
         element={<CategoryProducts title = 'Nuestros productos por categoría' />}
-        //loader={({ params: { pokemonName } }) => getPokemon(pokemonName)}
       />
       <Route
         id="productDetail"
@@ -47,7 +46,7 @@ const router = createBrowserRouter(
       <Route
         id="shoppingCart"
         path="/shoppingcart"
-        element={<div>Shopping Cart</div>}
+        element={<ShoppingCart title = 'Tu carrito de compras'/>}
       />
       <Route
         id="checkout"
