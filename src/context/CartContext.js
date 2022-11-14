@@ -8,7 +8,6 @@ export const useCartContext = () => useContext(CartContext)
 export const CartProvider = ({children}) => {
 
     const [cart, setCart] = useState([])
-
     
     const removeProduct = (id) => {
         const newCart = cart.filter(product => product.id !== id)
@@ -16,19 +15,28 @@ export const CartProvider = ({children}) => {
     }
 
     const addProduct = (productParm, qty) => {
-        //debo controlar el stock
         if (qty > 0) {
             const element = cart.find(product => product.id === productParm.id)
-
-            if(!element) return setCart([...cart, {...productParm, qty}])
-
-            const newCart = cart.map((product) => {
-                if (product.id === productParm.id) {
-                return { ...product, qty: product.qty + qty };
+            if(!element) {
+                if (qty <= productParm.stock) {
+                    setCart([...cart, {...productParm, qty}])
+                } else {
+                    return `No hay stock suficiente para agregar la cantidad indicada (${qty})`
                 }
-                return product;
-            });
-            setCart(newCart);
+            } else {
+                let cartChanged
+                const newCart = cart.map((product) => {
+                    if (product.id === productParm.id && product.qty + qty <= product.stock) {
+                        cartChanged = true
+                        return { ...product, qty: product.qty + qty };
+                    } else {
+                        cartChanged = false
+                        return product;
+                    }
+                });
+                if (!cartChanged) return `No hay stock suficiente para agregar la cantidad indicada (${qty})`
+                setCart(newCart);
+            }
         }
     }
 

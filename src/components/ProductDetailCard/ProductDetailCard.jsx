@@ -2,12 +2,16 @@ import { Counter } from "../Counter";
 import "./ProductDetailCard.scss"
 import { useCartContext } from "../../context/CartContext";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export const ProductDetailCard = ({ id, name, category, stock, price, img }) => {
 
-    const { addProduct } = useCartContext()
+    const { addProduct, getCartError } = useCartContext()
 
     const addToShoppingCart = (counter) => {
-        addProduct({id, name, stock, price}, counter)
+        const msg = addProduct({id, name, stock, price}, counter)
+        toast.error(msg)
     }
 
     return (
@@ -26,6 +30,18 @@ export const ProductDetailCard = ({ id, name, category, stock, price, img }) => 
                     stock ={stock}
                     buttonText = 'Agregar al carrito'
                     onButtonClick={addToShoppingCart}
+                />
+                <ToastContainer
+                    position="top-right"
+                    autoClose={2000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss={false}
+                    draggable
+                    pauseOnHover={false}
+                    theme="colored"                
                 />
             </div>
         </div>
