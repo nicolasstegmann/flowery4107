@@ -1,0 +1,1 @@
+export { ShoppingCartProductCard } from "./ShoppingCartProductCard";

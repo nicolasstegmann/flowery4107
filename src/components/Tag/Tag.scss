@@ -3,7 +3,8 @@
 .tag {
     font-size: floweryStyleGuide.$ts-floweryXXS;
     font-size: 8px;
-    background: #ede734;
+    //background: #ede734;
+    background-color: floweryStyleGuide.$c-flowerySecond;
     font-weight: bold;
     border-radius: 5px;
     max-width: max-content;

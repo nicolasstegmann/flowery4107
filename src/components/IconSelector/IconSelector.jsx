@@ -1,10 +1,12 @@
-import { FiShoppingCart, FiBell, FiClock } from "react-icons/fi";
+import { FiShoppingCart, FiBell, FiClock, FiDelete, FiTrash2 } from "react-icons/fi";
 
 export const IconSelector = ({icon}) => {
     const iconMap = {
         cart: FiShoppingCart,
         alert: FiBell,
-        clock: FiClock
+        clock: FiClock,
+        delete: FiDelete,
+        trash: FiTrash2
     }
 
     if(!icon || !iconMap[icon]) return null;

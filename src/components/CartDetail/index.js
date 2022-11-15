@@ -1,1 +1,0 @@
-export { CartDetail } from "./CartDetail";

@@ -10,7 +10,7 @@ export const ProductDetailCard = ({ id, name, category, stock, price, img }) => 
     const { addProduct } = useCartContext()
 
     const addToShoppingCart = (counter) => {
-        const msg = addProduct({id, name, stock, price}, counter)
+        const msg = addProduct({id, name, stock, price, img}, counter)
         toast.error(msg)
     }
 

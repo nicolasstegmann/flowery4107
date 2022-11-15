@@ -24,13 +24,12 @@ export const CartProvider = ({children}) => {
                     return `No hay stock suficiente para agregar la cantidad indicada (${qty})`
                 }
             } else {
-                let cartChanged
+                let cartChanged = false
                 const newCart = cart.map((product) => {
                     if (product.id === productParm.id && product.qty + qty <= product.stock) {
                         cartChanged = true
                         return { ...product, qty: product.qty + qty };
                     } else {
-                        cartChanged = false
                         return product;
                     }
                 });
