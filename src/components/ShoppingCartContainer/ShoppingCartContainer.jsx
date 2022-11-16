@@ -22,9 +22,8 @@ export const ShoppingCartContainer = ({ loading }) => {
         email: email
       },
       products: (cart.map((product) => {
-        const obj = {id: product.id, name: product.name, unitPrice: product.price, qty: product.qty, price: product.qty * product.price} 
-        return obj
-      } )),
+        return {id: product.id, name: product.name, unitPrice: product.price, qty: product.qty, price: product.qty * product.price}
+      })),
       total: getCartTotal()
     }
 
