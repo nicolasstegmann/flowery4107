@@ -4,6 +4,8 @@ import "./ShoppingCartContainer.scss";
 import { useCartContext } from "../../context/CartContext";
 import { IconSelector } from "../IconSelector/IconSelector";
 import { ShoppingCartProductCard } from "../ShoppingCartProductCard/ShoppingCartProductCard";
+import { addOrder } from "../../api/orders";
+import { bulkUpdateProductsStock } from "../../api/products";
 
 export const ShoppingCartContainer = ({ loading }) => {
   const { cart, emptyCart, getCartTotal } = useCartContext();
@@ -13,22 +15,32 @@ export const ShoppingCartContainer = ({ loading }) => {
     createOrder('Nicolás Stegmann', '+5493816091736', 'nicostegmann@gmail.com', cart)
   };
 
-  const createOrder = (name, phone, email) => {
+  const createOrder = async (buyerName, phone, email) => {
     
+    const orderDate = new Date();
+
     const order = {
       buyer: {
-        name: name,
+        name: buyerName,
         phone: phone,
         email: email
       },
+      date: orderDate,
       products: (cart.map((product) => {
         return {id: product.id, name: product.name, unitPrice: product.price, qty: product.qty, price: product.qty * product.price}
       })),
       total: getCartTotal()
     }
 
-    console.log(order)
-    return order;
+    const orderId = await addOrder(order);
+    await bulkUpdateProductsStock(order.products)
+    emptyCart()
+    return orderId
+    //TODO nuevo componemte para cargar datos de la orden: nombre, email y teléfono
+    //TODO este nuevo componente debe llamar a esta función. Hay que sacarla de acá y moverla al nuevo.
+    //TODO el correo pedirlo dos veces y controlar que sean iguales
+    //TODO mostrar toast o modal con ID
+    //TODO redirigir a home luego del toast o con un boton del modal
   }
 
   const handleEmptyCart = () => {
