@@ -4,44 +4,10 @@ import "./ShoppingCartContainer.scss";
 import { useCartContext } from "../../context/CartContext";
 import { IconSelector } from "../IconSelector/IconSelector";
 import { ShoppingCartProductCard } from "../ShoppingCartProductCard/ShoppingCartProductCard";
-import { addOrder } from "../../api/orders";
-import { bulkUpdateProductsStock } from "../../api/products";
+import { NavLink } from "react-router-dom";
 
 export const ShoppingCartContainer = ({ loading }) => {
   const { cart, emptyCart, getCartTotal } = useCartContext();
-
-  const handleCheckout = () => {
-    console.log("Checkout en proceso");
-    createOrder('Nicolás Stegmann', '+5493816091736', 'nicostegmann@gmail.com', cart)
-  };
-
-  const createOrder = async (buyerName, phone, email) => {
-    
-    const orderDate = new Date();
-
-    const order = {
-      buyer: {
-        name: buyerName,
-        phone: phone,
-        email: email
-      },
-      date: orderDate,
-      products: (cart.map((product) => {
-        return {id: product.id, name: product.name, unitPrice: product.price, qty: product.qty, price: product.qty * product.price}
-      })),
-      total: getCartTotal()
-    }
-
-    const orderId = await addOrder(order);
-    await bulkUpdateProductsStock(order.products)
-    emptyCart()
-    return orderId
-    //TODO nuevo componemte para cargar datos de la orden: nombre, email y teléfono
-    //TODO este nuevo componente debe llamar a esta función. Hay que sacarla de acá y moverla al nuevo.
-    //TODO el correo pedirlo dos veces y controlar que sean iguales
-    //TODO mostrar toast o modal con ID
-    //TODO redirigir a home luego del toast o con un boton del modal
-  }
 
   const handleEmptyCart = () => {
     emptyCart();
@@ -72,13 +38,14 @@ export const ShoppingCartContainer = ({ loading }) => {
         </span>
       </div>
       <div className="ShoppingCartContainer__botton">
-        <Button
-          onClick={() => handleCheckout()}
-          className="button"
-          leftIcon={<IconSelector icon={"cart"} />}
-        >
-          {"Check Out"}
-        </Button>
+        <NavLink to={'/checkout'} >
+          <Button
+            className="button"
+            leftIcon={<IconSelector icon={"cart"} />}
+          >
+            {"Check Out"}
+          </Button>
+        </NavLink>
         <Button
           onClick={() => handleEmptyCart()}
           className="button"

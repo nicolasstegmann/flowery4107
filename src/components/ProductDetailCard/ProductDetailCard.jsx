@@ -1,7 +1,7 @@
 import { Counter } from "../Counter";
 import "./ProductDetailCard.scss"
 import { useCartContext } from "../../context/CartContext";
-import { Toast, ToastOffSet } from "../Toast";
+import { ToastOffSet } from "../Toast";
 
 export const ProductDetailCard = ({ id, name, category, stock, price, img }) => {
 
@@ -9,7 +9,7 @@ export const ProductDetailCard = ({ id, name, category, stock, price, img }) => 
 
     const addToShoppingCart = (counter) => {
         const msg = addProduct({id, name, stock, price, img}, counter)
-        !msg || ToastOffSet(msg, 'error', 1500)
+        msg ? ToastOffSet(msg, 'error', 1500) : ToastOffSet('Producto/s agregado/s con éxito', 'success', 500)
     }
 
     return (
@@ -29,7 +29,6 @@ export const ProductDetailCard = ({ id, name, category, stock, price, img }) => 
                     buttonText = 'Agregar al carrito'
                     onButtonClick={addToShoppingCart}
                 />
-                <Toast />
             </div>
         </div>
     );

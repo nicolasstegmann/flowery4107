@@ -1,5 +1,5 @@
-export const Button = ({ onClick, leftIcon, rightIcon, disabled, children, className }) => (
-  <button className={`buttonPointer ${className}`} onClick={onClick} disabled={disabled} >
+export const Button = ({ onClick, leftIcon, rightIcon, disabled, children, className, type = 'button' }) => (
+  <button className={`buttonPointer ${className}`} onClick={onClick} disabled={disabled} type={type}>
    {leftIcon} {children} {rightIcon}
   </button>
 );

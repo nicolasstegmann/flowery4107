@@ -16,7 +16,7 @@ export const ShoppingCart = ({title}) => {
       setLoading(true);
       setShoppedProducts(cart)
       setLoading(false);
-    }, [shoppedProducts]);
+    }, [shoppedProducts, cart]);
 
     return (
        <>

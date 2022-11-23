@@ -1,6 +1,7 @@
 import { Header } from "../Header";
 import { Footer } from "../Footer";
 import {Outlet} from 'react-router-dom';
+import { Toast } from "../Toast";
 
 export const UserLayout = ({title}) => {
   return (
@@ -10,6 +11,7 @@ export const UserLayout = ({title}) => {
         <Outlet title = {title}/>
       </div>
       <Footer />
+      <Toast />
     </div>
   )
 }

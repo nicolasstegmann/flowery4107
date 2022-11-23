@@ -13,7 +13,7 @@ export const Toast = () => {
 
     return (
         <ToastContainer
-        position="top-right"
+        position="bottom-left"
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick

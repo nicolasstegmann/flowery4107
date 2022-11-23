@@ -12,10 +12,9 @@ import { AllProducts } from './pages/AllProducts';
 import { CategoryProducts } from './pages/CategoryProducts';
 import { ProductDetail } from './pages/ProductDetail';
 import { ShoppingCart } from './pages/ShoppingCart';
+import { Checkout } from './pages/Checkout';
 
-import { CartContext, CartProvider } from './context/CartContext'
-
-import { useContext } from 'react';
+import { CartProvider } from './context/CartContext'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -31,7 +30,6 @@ const router = createBrowserRouter(
         id="allProducts"
         path="/store"
         element={<AllProducts title = 'Todos nuestros productos' />}
-        //loader= {getProducts} //no funciona.
       />
       <Route
         id="categoryProducts"
@@ -51,14 +49,14 @@ const router = createBrowserRouter(
       <Route
         id="checkout"
         path="/checkout"
-        element={<div>Checkout</div>}
+        element={<Checkout title = 'Checkout ¡Estás a un paso de finalizar tu compra!'/>}
       />
     </Route>
   )
 );
 
 function App() {
-  const shoppingCart = useContext(CartContext)
+  //const shoppingCart = useContext(CartContext)
   return (
     <div className="App">
       <CartProvider>
