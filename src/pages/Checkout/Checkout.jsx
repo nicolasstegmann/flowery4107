@@ -1,3 +1,4 @@
+import "./Checkout.scss"
 import { OutletTitle } from "../../components/OutletTitle";
 import { CheckoutContainer } from "../../components/CheckoutContainer";
 import { useCartContext } from "../../context/CartContext";
@@ -19,7 +20,9 @@ export const Checkout = ({ title }) => {
       ) : (
         <>
           <OutletTitle title={title} />
-          <CheckoutContainer />
+          <div className="checkoutContainer">
+            <CheckoutContainer />
+          </div>
         </>
       )}
     </>

@@ -1,3 +1,4 @@
+import "./TextInputLiveFeedback.scss"
 import React from 'react';
 import { useField } from 'formik';
 
@@ -15,13 +16,13 @@ export const TextInputLiveFeedback = ({ label, helpText, ...props }) => {
           showFeedback ? (meta.error ? 'invalid' : 'valid') : ''
         }`}
       >
-        <div className="flex items-center space-between">
+        <div>
           <label htmlFor={props.id}>{label}</label>{' '}
           {showFeedback ? (
             <div
               id={`${props.id}-feedback`}
               aria-live="polite"
-              className="feedback text-sm"
+              className="feedback"
             >
               {meta.error ? meta.error : '✓'}
             </div>
@@ -33,7 +34,7 @@ export const TextInputLiveFeedback = ({ label, helpText, ...props }) => {
           aria-describedby={`${props.id}-feedback ${props.id}-help`}
           onFocus={handleFocus}
         />
-        <div className="text-xs" id={`${props.id}-help`} tabIndex="-1">
+        <div className="helpText" id={`${props.id}-help`} tabIndex="-1">
           {helpText}
         </div>
       </div>

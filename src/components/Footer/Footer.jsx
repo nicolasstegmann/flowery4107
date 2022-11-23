@@ -6,7 +6,7 @@ export const Footer = () => {
         </div>
         <div className="footer__ctn">
             <div className="footer__ctn__item">
-                <a href="https://www.winiksoft.com" target="_blank">4107 Flowery by Winiksoft</a>
+                <a href="https://www.winiksoft.com" target="_blank" rel="noreferrer">4107 Flowery by Winiksoft</a>
             </div>
         </div>
       </footer>

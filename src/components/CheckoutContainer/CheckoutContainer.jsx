@@ -1,3 +1,4 @@
+import "./CheckoutContainer.scss"
 import { Button } from "../Button";
 import { IconSelector } from "../IconSelector/IconSelector";
 import { useCartContext } from "../../context/CartContext";
@@ -55,79 +56,78 @@ export const CheckoutContainer = () => {
     /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
   return (
-    <>
-      <Formik
-        initialValues={{
-          buyerName: "",
-          buyerPhone: "",
-          buyerEmail: "",
-          buyerEmailValid: "",
-        }}
-        validationSchema={Yup.object({
-          buyerName: Yup.string()
-            .max(40, "No se permiten más de 40 caracteres")
-            .required("Debe ingresar su nombre y apellido"),
-          buyerPhone: Yup.string()
-            .matches(
-              phoneRegExp,
-              "El número de teléfono ingresado no es válido"
-            )
-            .required("Debe ingresar su teléfono"),
-          buyerEmail: Yup.string()
-            .email("El e-mail ingresado no es válido")
-            .required("Debe ingresar su e-mail"),
-          buyerEmailValid: Yup.string()
-            .oneOf([Yup.ref("buyerEmail"), null], "El e-mail no coincide")
-            .required("Debe ingresar su e-mail por segunda vez"),
-        })}
-        onSubmit={({ buyerName, buyerPhone, buyerEmail }) =>
-          handleCheckout(buyerName, buyerPhone, buyerEmail)
-        }
-      >
-        {(formik) => (
-          <form onSubmit={formik.handleSubmit}>
-            <TextInputLiveFeedback
-              label="Nombre y apellido"
-              id="buyerName"
-              name="buyerName"
-              helpText="Hasta 40 caracteres."
-              placeholder="Nombre y apellido"
-              type="text"
-            />
-            <TextInputLiveFeedback
-              label="Teléfono"
-              id="buyerPhone"
-              name="buyerPhone"
-              helpText="Ej.: 1147889655"
-              placeholder="Teléfono"
-              type="text"
-            />
-            <TextInputLiveFeedback
-              label="e-mail"
-              id="buyerEmail"
-              name="buyerEmail"
-              helpText="Ej.: persona@dominio.com"
-              placeholder="e-mail"
-              type="text"
-            />
-            <TextInputLiveFeedback
-              label="Reingrese su e-mail"
-              id="buyerEmailValid"
-              name="buyerEmailValid"
-              helpText="Ej.: persona@dominio.com"
-              placeholder="e-mail"
-              type="text"
-            />
+    <div className="checkoutCard">
+    <Formik
+      initialValues={{
+        buyerName: "",
+        buyerPhone: "",
+        buyerEmail: "",
+        buyerEmailValid: "",
+      }}
+      validationSchema={Yup.object({
+        buyerName: Yup.string()
+          .max(40, "No se permiten más de 40 caracteres")
+          .required("Debe ingresar su nombre y apellido"),
+        buyerPhone: Yup.string()
+          .matches(phoneRegExp, "El número de teléfono ingresado no es válido")
+          .required("Debe ingresar su teléfono"),
+        buyerEmail: Yup.string()
+          .email("El e-mail ingresado no es válido")
+          .required("Debe ingresar su e-mail"),
+        buyerEmailValid: Yup.string()
+          .oneOf([Yup.ref("buyerEmail"), null], "El e-mail no coincide")
+          .required("Debe ingresar su e-mail por segunda vez"),
+      })}
+      onSubmit={({ buyerName, buyerPhone, buyerEmail }) =>
+        handleCheckout(buyerName, buyerPhone, buyerEmail)
+      }
+    >
+      {(formik) => (
+        <form onSubmit={formik.handleSubmit}>
+          <TextInputLiveFeedback
+            label="Nombre y apellido"
+            id="buyerName"
+            name="buyerName"
+            helpText="Hasta 40 caracteres."
+            placeholder="Nombre y apellido"
+            type="text"
+          />
+          <TextInputLiveFeedback
+            label="Teléfono"
+            id="buyerPhone"
+            name="buyerPhone"
+            helpText="Ej.: 1147889655"
+            placeholder="Teléfono"
+            type="text"
+          />
+          <TextInputLiveFeedback
+            label="e-mail"
+            id="buyerEmail"
+            name="buyerEmail"
+            helpText="Ej.: persona@dominio.com"
+            placeholder="e-mail"
+            type="text"
+          />
+          <TextInputLiveFeedback
+            label="Reingrese su e-mail"
+            id="buyerEmailValid"
+            name="buyerEmailValid"
+            helpText="Ej.: persona@dominio.com"
+            placeholder="e-mail"
+            type="text"
+          />
+          <div className="checkoutCard__button">
             <Button
               type={"submit"}
               className="button"
-              leftIcon={<IconSelector icon={"cart"} />}
+              leftIcon={<IconSelector icon={"send"} />}
             >
               {"Finalizar compra"}
             </Button>
-          </form>
-        )}
-      </Formik>
-    </>
+          </div>
+        </form>
+      )}
+    </Formik>
+    </div>
   );
 };

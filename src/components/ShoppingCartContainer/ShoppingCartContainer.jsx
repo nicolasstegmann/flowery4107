@@ -37,7 +37,7 @@ export const ShoppingCartContainer = ({ loading }) => {
           ${getCartTotal()}
         </span>
       </div>
-      <div className="ShoppingCartContainer__botton">
+      <div className="ShoppingCartContainer__button">
         <NavLink to={'/checkout'} >
           <Button
             className="button"

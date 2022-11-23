@@ -1,0 +1,36 @@
+@use "../../styles/floweryWebGuide.scss" as floweryStyleGuide;
+
+.checkoutCard {
+    height: fit-content;
+    width: 50%;
+    min-width: 600px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.52);
+    border-radius: 20px;
+    background-color: floweryStyleGuide.$c-floweryThird;
+    padding: 10px;
+
+    form {
+        margin: 25px;
+        width: 80%;
+    }
+
+    &__button {
+        padding: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    
+        .button {
+            margin: 10px;
+        }
+    }
+
+}

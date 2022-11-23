@@ -7,32 +7,28 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-}
-
-.ShoppingCartProductCard__img {
-    width: 50px;
-    height: 50px;
-    img {
-        width: 100%;
-        height: 100%;
-        border: 1px solid transparent;
-        border-radius: 50%;
+    &__img {
+        width: 50px;
+        height: 50px;
+        img {
+            width: 100%;
+            height: 100%;
+            border: 1px solid transparent;
+            border-radius: 50%;
+        }
     }
-}
-
-.ShoppingCartProductCard__description {
-    width: 40%;
-    text-align: center;
-    font-size: floweryStyleGuide.$ts-floweryL;
-}
-
-.ShoppingCartProductCard__subtotal {
-    font-size: floweryStyleGuide.$ts-floweryL;
-    font-weight: bold;
-    width: 20%;
-    text-align: end;
-}
-
-.ShoppingCartProductCard__button {
-    width: 20%;
+    &__description {
+        width: 40%;
+        text-align: center;
+        font-size: floweryStyleGuide.$ts-floweryL;
+    }
+    &__subtotal {
+        font-size: floweryStyleGuide.$ts-floweryL;
+        font-weight: bold;
+        width: 20%;
+        text-align: end;
+    }    
+    &__button {
+        width: 20%;
+    }
 }
