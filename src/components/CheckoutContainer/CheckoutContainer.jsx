@@ -85,7 +85,7 @@ export const CheckoutContainer = () => {
       {(formik) => (
         <form onSubmit={formik.handleSubmit}>
           <TextInputLiveFeedback
-            label="Nombre y apellido"
+            label="Tu nombre y apellido"
             id="buyerName"
             name="buyerName"
             helpText="Hasta 40 caracteres."
@@ -93,7 +93,7 @@ export const CheckoutContainer = () => {
             type="text"
           />
           <TextInputLiveFeedback
-            label="Teléfono"
+            label="Tu teléfono"
             id="buyerPhone"
             name="buyerPhone"
             helpText="Ej.: 1147889655"
@@ -101,7 +101,7 @@ export const CheckoutContainer = () => {
             type="text"
           />
           <TextInputLiveFeedback
-            label="e-mail"
+            label="Tu e-mail"
             id="buyerEmail"
             name="buyerEmail"
             helpText="Ej.: persona@dominio.com"
@@ -109,7 +109,7 @@ export const CheckoutContainer = () => {
             type="text"
           />
           <TextInputLiveFeedback
-            label="Reingrese su e-mail"
+            label="Reingresá tu e-mail"
             id="buyerEmailValid"
             name="buyerEmailValid"
             helpText="Ej.: persona@dominio.com"
