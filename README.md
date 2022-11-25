@@ -38,13 +38,14 @@
       <a href="#acerca-del-proyecto">Acerca del proyecto</a>
       <ul>
         <li><a href="#desarrollado-con">Desarrollado con</a></li>
+        <li><a href="#dependencias">Dependencias</a></li>        
       </ul>
     </li>
     <li>
       <a href="#comenzando">Comenzando</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisitos</a></li>
-        <li><a href="#instalacion">Instalación</a></li>
+        <li><a href="#prerequisitos">Prerequisitos</a></li>
+        <li><a href="#instalación">Instalación</a></li>
       </ul>
     </li>
     <li><a href="#uso">Uso</a></li>
@@ -67,6 +68,20 @@ Somos unos convencidos que **una imagen vale más que mil palabras**. Enjoy it!
 * [![React][React.js]][React-url]
 * [![Firebase][Firebase]][Firebase-url]
 
+<p align="right">(<a href="#readme-top">volver al inicio</a>)</p>
+
+### Dependencias
+
+| **Dependencia** | **Descripción** | **Version** | **Licencia** |
+| -------------- | --------------- | ----------- | ----------- |
+ | [reactJS](https://es.reactjs.org/docs/getting-started.html) | La biblioteca Javascript seleccionada para el desarrollo | 8.2.0 | Meta |
+ | [firebase](https://console.firebase.google.com/) | Base de datos no relacional para el almacenamiento de la información | 9.14.0 | Google |
+ | [formik](https://formik.org/) | Para desarrollar formularios en React de una manera más sencilla. | 2.2.9 | Formium |
+ | [react-router-dom](https://reactrouter.com/en/main) | Soluciones para la navegabilidad del sitio entre las diferentes páginas | 6.4.3 | Remix  Software |
+ | [react-icons](https://react-icons.github.io/react-icons/) | Para incorporar de una manera sencilla íconos al proyecto | 4.6.0 | MIT |
+ | [react-toastify](https://www.npmjs.com/package/react-toastify) | Manera simple de desarrollar y amigable para el usuario de recibir notificaciones | 9.1.1 | MIT |
+ | [sass](https://www.npmjs.com/package/sass) | Simplifica la manera de escribir estilos css obteniendo un código más legible y eficiente | 1.55.0 | MIT |
+ | [yup](https://github.com/jquense/yup) | Librería utilizada para validar en forma sencilla campos en formularios. Perfecto aliado de formik  | 0.32.11 | MIT |
 <p align="right">(<a href="#readme-top">volver al inicio</a>)</p>
 
 ## Comenzando
@@ -108,12 +123,12 @@ Debes contar con NPM
 <!-- ROADMAP -->
 ## Roadmap
 
+- [X] Control de stock ante usuarios concurrentes antes de generar la orden
 - [ ] Cuentas de usuario - Login
 - [ ] Lista de deseos
 - [ ] Selección de características al comprar los productos
     - [ ] Color
     - [ ] Tamaño
-- [ ] Control de stock ante usuarios concurrentes antes de generar la orden
 - [ ] Carrito persistente al cerrar el navegador
 - [ ] Mis órdenes
 
@@ -139,7 +154,7 @@ No te olvides de darnos una estrella. **¡Gracias nuevamente!**
 
 
 <!-- CONTACT -->
-## Contact
+## Contacto
 
 Winiksoft Contact - winiksoft@winiksoft.com
 
