@@ -48,7 +48,6 @@
         <li><a href="#instalación">Instalación</a></li>
       </ul>
     </li>
-    <li><a href="#uso">Uso</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contribuir">Contribuir</a></li>
     <li><a href="#contacto">Contacto</a></li>
@@ -158,7 +157,7 @@ No te olvides de darnos una estrella. **¡Gracias nuevamente!**
 
 Winiksoft Contact - winiksoft@winiksoft.com
 
-Project Link: [https://github.com/nicolasstegmann/flowery4107](https://github.com/nicolasstegmann/flowery4107)
+Link del proyecto: [https://github.com/nicolasstegmann/flowery4107](https://github.com/nicolasstegmann/flowery4107)
 
 <p align="right">(<a href="#readme-top">volver al inicio</a>)</p>
 
