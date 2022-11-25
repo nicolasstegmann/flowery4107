@@ -165,10 +165,11 @@ Link del proyecto: [https://github.com/nicolasstegmann/flowery4107](https://gith
 [stars-url]: https://github.com/nicolasstegmann/flowery4107/stargazers
 [forks-shield]: https://img.shields.io/github/forks/nicolasstegmann/flowery4107.svg?style=for-the-badge
 [forks-url]: https://github.com/nicolasstegmann/flowery4107/network/members
-[issues-shield]: https://img.shields.io/github/issues/nicolasstegmann/flowery4107.svg?style=for-the-badgehttps://img.shields.io/github/issues/nicolasstegmann/flowery4107.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/nicolasstegmann/flowery4107.svg?style=for-the-badge
+[issues-url]: https://github.com/nicolasstegmann/flowery4107/issues
 [www-shield]: https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white
 [www-url]: https://www.winiksoft.com/
-[issues-url]: https://github.com/nicolasstegmann/flowery4107/issues
+
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/nicolas-stegmann/
 
